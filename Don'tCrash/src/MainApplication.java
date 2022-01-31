@@ -113,6 +113,7 @@ public class MainApplication extends GraphicsProgram {
 		titleScreen = new TitleScreenPane(this);
 		over = new GameOverPane(this);
 		name = new NameInput(this);
+		carSelectionPane = new CarSelectionPane(this);
 		setupInteractions();
 		switchToGameMenu();
 	}
