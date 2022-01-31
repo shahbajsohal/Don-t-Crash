@@ -18,6 +18,7 @@ public class MainApplication extends GraphicsProgram {
 	private TitleScreenPane titleScreen;
 	private GameOverPane over;
 	private NameInput name;
+	private CarSelectionPane carSelectionPane;
 	
 	/* Method: setupInteractions
 	 * -------------------------
@@ -163,7 +164,9 @@ public class MainApplication extends GraphicsProgram {
 	public void switchToGame() {
 		switchToScreen(game);
 	}
-	
+	public void switchToCarSelection(){
+		switchToScreen(carSelectionPane);
+	}
 
 	public static void main(String[] args) {
 		new MainApplication().start();
