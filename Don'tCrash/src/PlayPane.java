@@ -6,6 +6,7 @@ import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
+import java.io.IOException;
 import java.awt.event.KeyListener;
 import java.awt.event.KeyEvent;
 
@@ -68,13 +69,14 @@ public class PlayPane extends GraphicsPane implements KeyListener, ActionListene
 	int delayHealth;
 	int delayPower;
 
-	public PlayPane(MainApplication app) {
+	public PlayPane(MainApplication app){
 		super();
 		program = app;
 		
 		traf = new Traffic(app, this);
 		
 		player = new PlayerCar(app, this);
+		//player.setPlayerCar();
 		
 		scoreLabel = new GLabel("Score: 0", 0, 200);
 		scoreLabel.setFont("Arial-Bold-22");
@@ -142,7 +144,7 @@ public class PlayPane extends GraphicsPane implements KeyListener, ActionListene
 	}
 	
 	//resets the game's functions once the player plays again
-	public void reset() {
+	public void reset(){
 		player = new PlayerCar(program, this);
 		traf = new Traffic(program, this);
 		score = 0;
@@ -184,6 +186,8 @@ public class PlayPane extends GraphicsPane implements KeyListener, ActionListene
 		program.remove(levelLabel);
 		program.remove(healthLabel);
 		program.remove(pauseIndicator);
+		program.remove(invicibilityIndicator);
+		program.remove(cooldown);
 		traf.hide();
 		hide();
 	}

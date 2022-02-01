@@ -1,24 +1,31 @@
-	import acm.graphics.GImage;
+	import java.io.IOException;
+
+import acm.graphics.GImage;
 
 public class PlayerCar extends Object{
-	String fileName;
-	int width;
-	int height;
-	double x;
-	double y;
-	double dx;
-	int health;
-	MainApplication program;
-	PlayPane game;
-	GImage car;
+	private String fileName;
+	private int width;
+	private int height;
+	private double x;
+	private double y;
+	private double dx;
+	private int health;
+	private MainApplication program;
+	private PlayPane game;
+	private GImage car;
 	
-	public PlayerCar(MainApplication app, PlayPane pane) { 
+	public PlayerCar(MainApplication app, PlayPane pane){ 
 		x = 400;
 		y = 450;
 		dx = 0;
 		program = app;
-		fileName = "AssetImages/SuperB.png";
-		car = new GImage(fileName,x,y);
+		car = new GImage("AssetImages/SuperB.png",x,y);
+		car.setSize(60,120);
+	}
+	
+	public void setPlayerCar() {
+		//car = new GImage("AssetImages/SuperB.png",x,y);
+		car.setImage(program.getCarSelection());
 		car.setSize(60,120);
 	}
 	

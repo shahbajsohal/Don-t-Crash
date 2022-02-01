@@ -19,6 +19,7 @@ public class MainApplication extends GraphicsProgram {
 	private GameOverPane over;
 	private NameInput name;
 	private CarSelectionPane carSelectionPane;
+	private String carSelection;
 	
 	/* Method: setupInteractions
 	 * -------------------------
@@ -149,10 +150,10 @@ public class MainApplication extends GraphicsProgram {
 	public void switchToGameMenu() {
 		switchToScreen(titleScreen);
 		
-		if (SoundEffect.Audio != null) {
-			SoundEffect.STOP();
-		}
-		SoundEffect.PLAY(new File("SoundAssets/mute city 3.5.wav"));
+//		if (SoundEffect.Audio != null) {
+//			SoundEffect.STOP();
+//		}
+//		SoundEffect.PLAY(new File("SoundAssets/mute city 3.5.wav"));
 	}
 	
 	public void switchToHighScore() {
@@ -176,5 +177,13 @@ public class MainApplication extends GraphicsProgram {
 
 	public static void main(String[] args) {
 		new MainApplication().start();
+	}
+
+	public String getCarSelection() {
+		return carSelection;
+	}
+
+	public void setCarSelection(String carSelection) {
+		this.carSelection = carSelection;
 	}
 }
