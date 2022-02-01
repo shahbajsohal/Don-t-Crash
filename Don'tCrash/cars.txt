@@ -1,7 +1,4 @@
 3
-Supra
 AssetImages/SuperB.png
-Audi
 AssetImages/Audi.png
-Mercedes
-AssestImages/Mercedez.png
+AssetImages/Mercedez.png
