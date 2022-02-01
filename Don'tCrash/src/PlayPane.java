@@ -76,7 +76,7 @@ public class PlayPane extends GraphicsPane implements KeyListener, ActionListene
 		traf = new Traffic(app, this);
 		
 		player = new PlayerCar(app, this);
-		//player.setPlayerCar();
+		
 		
 		scoreLabel = new GLabel("Score: 0", 0, 200);
 		scoreLabel.setFont("Arial-Bold-22");
@@ -161,6 +161,7 @@ public class PlayPane extends GraphicsPane implements KeyListener, ActionListene
 	@Override
 	public void showContents() {
 		reset();
+		player.setPlayerCar();
 		program.add(background);
 		program.add(roadOutline);
 		program.add(road);

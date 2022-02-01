@@ -19,12 +19,12 @@ public class PlayerCar extends Object{
 		y = 450;
 		dx = 0;
 		program = app;
-		car = new GImage("AssetImages/SuperB.png",x,y);
-		car.setSize(60,120);
+		//car = new GImage("AssetImages/SuperB.png",x,y);
+		//car.setSize(60,120);
 	}
 	
 	public void setPlayerCar() {
-		//car = new GImage("AssetImages/SuperB.png",x,y);
+		car = new GImage("AssetImages/SuperB.png",400,450);
 		car.setImage(program.getCarSelection());
 		car.setSize(60,120);
 	}
